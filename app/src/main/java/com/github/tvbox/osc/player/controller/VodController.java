@@ -941,6 +941,7 @@ public class VodController extends BaseController {
         //屏显
         int disPlay = Hawk.get(HawkConfig.SCREEN_DISPLAY, GONE);
         mTopRoot2.setVisibility(disPlay);
+        tv_screen_display.setVisibility(disPlay);
         seekTime.setVisibility(disPlay);
         net_play_speed.setVisibility(disPlay);
         mPlayPauseTime.setVisibility(disPlay);
@@ -949,6 +950,7 @@ public class VodController extends BaseController {
             @Override
             public void onClick(View view) {
                 int disPlay =(Hawk.get(HawkConfig.SCREEN_DISPLAY, GONE) == VISIBLE) ? GONE : VISIBLE;
+                tv_screen_display.setVisibility(disPlay);
                 seekTime.setVisibility(disPlay);
                 net_play_speed.setVisibility(disPlay);
                 if(disPlay==VISIBLE)mPlayPauseTime.setVisibility(disPlay);
